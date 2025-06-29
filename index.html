@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DigitalOcean Kubernetes App</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at top left, #1e1e2f, #0e0e1a);
+      color: #61dafb;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      color: #2a7dbf; /* brighter blue */
+      text-shadow: 0 0 8px #2a7dbf99;
+      white-space: nowrap;
+    }
+
+    .logo-container img {
+      height: 60px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-container img:hover {
+      transform: scale(1.1) rotate(3deg);
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: #b3e5fc;
+      margin-bottom: 2em;
+      max-width: 600px;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      font-size: 1.1rem;
+      border: none;
+      background-color: #61dafb;
+      color: #000;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background-color: #21a1f1;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo-container">
+      <img src="digitalocean-logo.png" alt="DigitalOcean Logo" id="do-logo" title="DigitalOcean" />
+    </div>
+    <h1>Welcome to Kubernetes</h1>
+  </div>
+  <p>Node.js app is running smoothly on DigitalOcean 🚀</p>
+  <button class="btn" onclick="window.open('https://docs.digitalocean.com/products/kubernetes/', '_blank')">
+    Explore Digital Ocean k8s
+  </button>
+
+  <script>
+    document.getElementById('do-logo').addEventListener('click', () => {
+      alert('Thanks for clicking the DigitalOcean logo!');
+    });
+  </script>
+</body>
+</html>
+
