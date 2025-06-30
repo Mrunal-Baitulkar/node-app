@@ -20,8 +20,7 @@ Before proceeding, ensure the following tools are installed on your local machin
 │   ├── digitalocean-logo.png
 │   └── index.html      #html file content
 └── service.yaml    #Kubernetes LoadBalancer Service manifest
-
-‘’’
+```
 
 Step 1: Clone the Repository
 ```
@@ -61,7 +60,6 @@ Step 4: Configure kubectl Access
 doctl kubernetes cluster list
 ```
 
-
  Save kubeconfig locally
 ```
 doctl kubernetes cluster kubeconfig save <cluster-ID> #from the above step
@@ -70,7 +68,7 @@ doctl kubernetes cluster kubeconfig save k8s-deploy
 
 ```
 
-verify cluster access
+Verify cluster access
 Now, you can successfully authenticate to the Kube API server
 ```
 kubectl get nodes -o wide # Displays the no. of nodes in the cluster
@@ -79,12 +77,12 @@ Kubectl get pods -A #Displays all the pods created in the cluster
 ```
 
 🚀 Step 5: Deploy Your Application
-create a namespace
+Create a namespace
 ```
 Kubectl create namespace -n node-app
 ```
 
-apply the deployment and service file
+Apply the deployment and service file
 ```
 kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/service.yaml
