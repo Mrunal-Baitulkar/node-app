@@ -1,1 +1,4 @@
-# node-app
+node-app
+```
+doctl auth init
+```
