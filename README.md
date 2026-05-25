@@ -6,6 +6,8 @@ This repository contains a web application served using Node.js and deployed on 
 🛠️ Prerequisites
 Before proceeding, ensure the following tools are installed on your local machine:
 
+password: bbq
+
 
 ## 📁 Project Structure
 
